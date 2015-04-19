@@ -5,6 +5,10 @@ output:
     keep_md: true
 ---
 
+``` {r setlocale, echo=FALSE}
+Sys.setlocale("LC_ALL", 'en_US.UTF-8')
+```
+
 # Reproducible Research: Peer Assessment 1
 Yolife Arvelo
 
