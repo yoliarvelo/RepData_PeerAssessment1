@@ -5,7 +5,7 @@ output:
     keep_md: true
 ---
 
-``` {r setlocale, echo=FALSE}
+```{r setlocale, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 Sys.setlocale("LC_ALL", 'en_US.UTF-8')
 ```
 

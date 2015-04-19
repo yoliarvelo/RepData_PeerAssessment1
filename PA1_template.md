@@ -6,9 +6,6 @@ output:
 ---
 
 
-```
-## [1] "LC_CTYPE=en_US.UTF-8;LC_NUMERIC=C;LC_TIME=en_US.UTF-8;LC_COLLATE=en_US.UTF-8;LC_MONETARY=en_US.UTF-8;LC_MESSAGES=en_US.UTF-8;LC_PAPER=es_ES.UTF-8;LC_NAME=C;LC_ADDRESS=C;LC_TELEPHONE=C;LC_MEASUREMENT=es_ES.UTF-8;LC_IDENTIFICATION=C"
-```
 
 # Reproducible Research: Peer Assessment 1
 Yolife Arvelo
@@ -35,7 +32,7 @@ unzip("./activity.zip")
 filedate <- file.info("activity.csv")$mtime
 ```
 
-To create this report the data was downloaded on: 2015-04-19 23:53:29
+To create this report the data was downloaded on: 2015-04-19 23:57:05
 
 The variables included in the dataset are:
 
@@ -104,22 +101,6 @@ A summarized dataset was created to calculate the total steps per day using dply
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 summaryPerDay <- summarise(group_by(activitydata,date), total=sum(steps,na.rm=TRUE))
 mean=mean(summaryPerDay$total,na.rm=TRUE)
 median=median(summaryPerDay$total,na.rm=TRUE)
